@@ -3,14 +3,21 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "subgraph": "cd api && nodemon -e graphql,js subgraph.js",
+    "router": "rover dev --url http://localhost:4002 -p 4000 --name subgraph"
   },
   "dependencies": {
     "@apollo/client": "^3.7.3",
+    "@apollo/server": "^4.3.1",
+    "@apollo/subgraph": "^2.2.3",
+    "@graphql-tools/mock": "^8.7.15",
     "deepmerge": "^4.2.2",
-    "lodash": "4.17.20",
     "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
+    "lodash": "4.17.20",
     "next": "latest",
+    "nodemon": "^2.0.20",
     "prop-types": "^15.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
